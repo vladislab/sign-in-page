@@ -39,7 +39,7 @@ class Form extends Component {
             </FormControl>
             <FormControl margin="normal" required fullWidth>
               <InputLabel htmlFor="password">Password</InputLabel>
-              <Input id="password" name="password" autoFocus />
+              <Input id="password" name="password" />
             </FormControl>
             <FormControlLabel
               control={<Checkbox color="primary" />}

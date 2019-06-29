@@ -9,7 +9,7 @@ export class ThemeProvider extends Component {
   }
   render() {
     return (
-      <ThemeContext.Provider value={{ ...this.state }}>
+      <ThemeContext.Provider value={this.state.isDarkMode}>
         {this.props.children}
       </ThemeContext.Provider>
     );
