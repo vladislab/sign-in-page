@@ -5,7 +5,7 @@ export const LanguageContext = createContext();
 export class LanguageProvider extends Component {
   constructor(props) {
     super(props);
-    this.state = { language: "french" };
+    this.state = { language: "english" };
   }
   changeLang = e => {
     this.setState({ language: e.target.value });
@@ -20,3 +20,9 @@ export class LanguageProvider extends Component {
     );
   }
 }
+
+export const withLanguageContext = Component => props => (
+  <LanguageContext.Consumer>
+    {value => <Component languageContext={value} {...props} />}
+  </LanguageContext.Consumer>
+);
